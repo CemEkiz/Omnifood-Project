@@ -1,0 +1,23 @@
+=========== ENGLISH
+This is a static website presenting an app called "Omnifood" (healthy food delivery)
+The design is simple and modern, there is CTA button for try the app, screens of the app, testimonials, pricing card and a form!
+
+This project is based on Jonas Schmedtmann's course on Udemy, it was a project where the goal was to master basic HTML & CSS features by creating a landing page :
+
+- Using semantic HTML and create a form
+- Flexbox for the navbar
+- CSS Grid for the layout of the page
+- Transition effects on hover of some components
+- Some Javascript for the Mobile Hamburger Menu and also for changing the date in the copyright section automatically
+
+=========== FRENCH
+Ceci est un site web statique dans lequel une app nommé "Omnifood" est présenté (activité : livraison de plat sain)
+Le design du site web est simple et moderne, il y a des CTA sous forme de boutons, la présentation de l'application, les avis des utilisateurs, les tarifs sous form de Card et un formulaire
+
+Ce projet est basé sur une formation (de Jonas Schmedtmann) que j'ai réalisé sur Udemy et dont le but était de maîtriser les bases du langage HTML & CSS en créant une Landing Page :
+
+- J'ai utilisé des balises HTML sémantiques et crée un formulaire
+- J'ai utilisé Flexbox pour la Navbar
+- J'ai utilisé CSS Grid pour la mise en page des sections du site web
+- J'ai crée des effets de transition au survol de certains composants
+- J'ai programmé un peu de JavaScript pour le Hamburger Menu (mobile) mais aussi pour changer la date automatiquement dans la section copyright
