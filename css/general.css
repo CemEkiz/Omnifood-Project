@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.5);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+html {
+  /* font-size: 10px */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Pourcentage du paramètre de taille de police du navigateur de l'utilisateur */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Ne fonctionne pas sur Safari -> cf. fix en JS */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  /* Cela fonctionne uniquement si rien n'est position:absolute en relative avec le body */
+  overflow-x: hidden;
+}
+
+/*****************************/
+/* GENERAL REUSABLE COMPONENTS */
+/*****************************/
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+/* Cela signifie qu'on applique une marge de 96px à tous les grid mais PAS aux last-child */
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+  /* La fonction repeat() ci-dessus signifie "1fr 1fr" */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  /* La fonction repeat() ci-dessus signifie "1fr 1fr 1fr" */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  /* La fonction repeat() ci-dessus signifie "1fr 1fr 1fr 1fr" */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  /* La fonction repeat() ci-dessus signifie "1fr 1fr 1fr 1fr" */
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: #333;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 9px;
+  padding: 1.6rem 3.2rem;
+
+  /* Trick animation */
+  transition: all 0.3s;
+
+  /* Applicable seulement au .btn (celui du <form>) */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  color: #555;
+
+  /* Cela ne fonctionne pas car la bordure est ajoutée à l'extérieur */
+  /* border: 3px solid #fff; */
+
+  /* Trick pour ajouter une bordure à l'intérieur d'un élément : */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
+/* Trick pour souligner un lien sans text-decoration mais plutôt border-bottom + transition pour adoucir l'animation */
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  /* border-bottom: none; */ /* à ne pas utiliser ! */
+  border-bottom: 1px solid transparent;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem #fdf2e950;
+}
+
+/* HELPER CLASSES */
+
+.mr-sm {
+  margin-right: 1.6rem !important;
+}
+
+.mb-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}

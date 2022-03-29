@@ -1,0 +1,692 @@
+/*****************************/
+/* HEADER */
+/*****************************/
+
+.header {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+
+  /* Je définis une largeur de 9.6px car je veux le rendre sticky plus tard */
+  height: 9.6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* pour le fonctionnement de overflow-x: hidden sur l'élément body (cf. body) */
+  position: relative;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/*****************************/
+/* NAVIGATION */
+/*****************************/
+
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  border-radius: 9px;
+  padding: 1.2rem 2.4rem;
+  background-color: #e67e22;
+
+  /* La couleur du texte ici est en conflit avec le #333 qui est un peu plus haut, mais grâce à la spécificité du sélecteur de cette déclaration, le #fff a la priorité */
+  color: #fff;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  /* Les boutons n'apparaissent dans la taille normal */
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+/* Lorsque nous allons faire apparaître les boutons à un certain breakpoint, nous ne voulons que le bouton hamburger, donc le close doit rester en display: none, il n'apparaîtra que lorsque le menu hamburger sera ouvert */
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/*****************************/
+/* HERO SECTION */
+/*****************************/
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+/* Dans cette déclaration,
+  les propriétés sont quasiment similaire à nos Reusable "container" et "grid",
+  alors pourquoi ne pas les avoir utilisé ? -> Dans un but de pratiquer pour mieux comprendre mais aussi car la largeur de ce .hero est de 1300px or le "container" est défini à 1200px */
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+
+  /* Padding utile pour pas que la section Hero ne se colle aux bords de la fenêtre pour les petits écrans */
+  padding: 0 3.2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.delivered-meals {
+  margin-top: 8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.delivered-imgs {
+  display: flex;
+
+  /* Pour overlap les avatars, cette technique ne fonctionne pas ; il faut utiliser margin-right en valeur négative sur les <img> elles-mêmes (cf. prochaine déclaration) */
+  /* gap: -1.6rem; */
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  border-radius: 50%;
+  border: 3px solid #fdf2e9;
+
+  /* Cela fonctionne mais il ne faut pas oublier d'enlever le margin-right sur le dernier élément (cf. prochaine déclaration) */
+  margin-right: -1.6rem;
+}
+
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #e67e22;
+  font-weight: 700;
+}
+
+/*****************************/
+/* FEATURED IN SECTION */
+/*****************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/*****************************/
+/* HOW IT WORK SECTION */
+/*****************************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-number {
+  font-size: 9.8rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Je vais ajouter un élément visuel grâce à cette déclaration. Je ne le fais pas en HTML pour éviter de surcharger mon HTML inutilement. 
+Je veux ajouter une forme derrière mon image mais je n'applique pas cette déclaration à l'image elle-même car une <img /> ne peut pas avoir d'enfant, alors qu'un div le peut. C'est pour cela que je vais appliquer la pseudo-classe ::before au div.step-img-box ci-dessous */
+.step-img-box::before {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  background-color: #fdf2e9;
+
+  /* Pour faire un carré le width c'est OK mais le height n'est pas visible, il faut alors utiliser un petit trick: appliquer un padding bottom du même % que le width */
+  width: 60%;
+  /* height: 60%; */
+  padding-bottom: 60%;
+}
+
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: -1;
+
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+}
+
+.step-img {
+  width: 35%;
+}
+
+/*****************************/
+/* MEALS SECTION */
+/*****************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+
+  /* Un petit problème que j'avais rencontré lorsque j'ai crée une card c'était que l'image en top de la card cachait le border-radius du top-left et top-right de la card. La solution que j'avais trouvé était d'appliquer un border radius en top-left et right de l'image pour pallier à ce problème. Mais il existe une meilleur technique -> overflow: hiden; */
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+/* Tricks pour animer les cards */
+.meal:hover {
+  transform: translateY(-2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  border-radius: 50px;
+  padding: 0.4rem 0.8rem;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+/* Il est très commun d'utiliser les flexbox sur les <ul> car ça facilite la mise en page des éléments <li> */
+.meal-attributes {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/*****************************/
+/* TESTIMONIALS SECTION */
+/*****************************/
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 4.8rem; */
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/*****************************/
+/* PRICING SECTION */
+/*****************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+  /* padding: 4.8rem; */
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid #fdf2e9;
+  /* J'applique 2 pixel de moins à celui-ci pour pallier à la différence entre la card "starter" qui comporte un border de 2px */
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete:after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #ffd43b;
+  color: #333;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  margin-top: 4.8rem;
+  text-align: center;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fdf2e9;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+/*****************************/
+/* CTA SECTION */
+/*****************************/
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem 0;
+}
+
+.cta {
+  display: grid;
+  /* 2/3 = 66.6% + 1/3 = 33.3% */
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+
+  /* Trick pour créer un fond dégradé (on remarque que le dégradé est traité comme une image c'est pourquoi il faut utiliser "background-image") */
+  /* background-image: linear-gradient(90deg, red, #e67e22); */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: #45260a;
+}
+
+.cta-text-box .heading-secondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  /* Avant "img" j'ai écris "../" ce qui signifie que je recule vais au dossier parent. Si j'avais écrit "../../img/eating.jpg" à la place cela veut dire que je vais au dossier grand-parent */
+  /* background-image: url(../img/eating.jpg); */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 152, 78, 0.35),
+      rgba(230, 126, 34, 0.35)
+    ),
+    url(../img/eating.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  border: none;
+  color: inherit;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  /* Par défaut <input> n'hérite pas du font-family du <body> du coup il faut forcer avec la déclaration ci-dessous */
+  font-family: inherit;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+/*****************************/
+/* FOOTER SECTION */
+/*****************************/
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.4;
+  /* Utile pour ramener un élément à part, j'ai dabord passé .logo-col en flex + column, ensuite son item .copyright en margin-top: auto */
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
+}
