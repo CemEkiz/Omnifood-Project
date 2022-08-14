@@ -2,326 +2,326 @@
 
 /* 84em = 1344px --> (84em*16px=1344px) */
 @media (max-width: 84em) {
-  .hero {
-    max-width: 120rem; /* Avant cétait -> 130rem */
-  }
-  .heading-secondary {
-    font-size: 4.4rem; /* Avant 5.2remm */
-  }
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
+	.hero {
+		max-width: 120rem; /* Avant cétait -> 130rem */
+	}
+	.heading-secondary {
+		font-size: 4.4rem; /* Avant 5.2remm */
+	}
+	.gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 /* 75em = 1200px --> (75em*16px=1200px) */
 @media (max-width: 75em) {
-  html {
-    /* De base la font-size est défini à 62,5% qui correspond à 10px */
-    /* Ici nous voulons réduire de de 1px : pour passer de 10px à 9px mais en pourcentage */
-    /* 9px / 16px = 0,5625 => 56,25% */
-    font-size: 56.25%;
-  }
+	html {
+		/* De base la font-size est défini à 62,5% qui correspond à 10px */
+		/* Ici nous voulons réduire de de 1px : pour passer de 10px à 9px mais en pourcentage */
+		/* 9px / 16px = 0,5625 => 56,25% */
+		font-size: 56.25%;
+	}
 
-  .grid {
-    column-gap: 4.8rem;
-    row-gap: 6.4rem;
-  }
+	.grid {
+		column-gap: 4.8rem;
+		row-gap: 6.4rem;
+	}
 
-  .header {
-    padding: 0 3.6rem;
-  }
+	.header {
+		padding: 0 3.6rem;
+	}
 
-  .hero {
-    gap: 4.8rem;
-  }
+	.hero {
+		gap: 4.8rem;
+	}
 
-  .main-nav-list {
-    gap: 3.2rem;
-  }
+	.main-nav-list {
+		gap: 3.2rem;
+	}
 
-  .testimonials-container {
-    padding: 9.6rem 3.2rem;
-  }
+	.testimonials-container {
+		padding: 9.6rem 3.2rem;
+	}
 
-  .heading-secondary {
-    font-size: 3.6rem;
-  }
+	.heading-secondary {
+		font-size: 3.6rem;
+	}
 
-  .heading-tertiary {
-    font-size: 2.4rem;
-  }
+	.heading-tertiary {
+		font-size: 2.4rem;
+	}
 }
 
 /* 59em = 944px --> (59em*16px=944px) */
 @media (max-width: 59em) {
-  html {
-    /* 8px / 16px = 0.5 = 50% */
-    font-size: 50%;
-  }
+	html {
+		/* 8px / 16px = 0.5 = 50% */
+		font-size: 50%;
+	}
 
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 0 8rem;
-    gap: 6.4rem;
-  }
+	.hero {
+		grid-template-columns: 1fr;
+		padding: 0 8rem;
+		gap: 6.4rem;
+	}
 
-  .hero-img-box,
-  .hero-text-box {
-    text-align: center;
-  }
+	.hero-img-box,
+	.hero-text-box {
+		text-align: center;
+	}
 
-  .hero-img {
-    width: 60%;
-  }
+	.hero-img {
+		width: 60%;
+	}
 
-  .delivered-meals {
-    justify-content: center;
-    margin-top: 3.2rem;
-  }
+	.delivered-meals {
+		justify-content: center;
+		margin-top: 3.2rem;
+	}
 
-  .logos img {
-    height: 2.4rem;
-  }
+	.logos img {
+		height: 2.4rem;
+	}
 
-  .step-number {
-    font-size: 7.4rem;
-  }
+	.step-number {
+		font-size: 7.4rem;
+	}
 
-  .meal-content {
-    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
-  }
+	.meal-content {
+		padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+	}
 
-  .section-testimonials {
-    grid-template-columns: 1fr;
-  }
+	.section-testimonials {
+		grid-template-columns: 1fr;
+	}
 
-  .gallery {
-    grid-template-columns: repeat(6, 1fr);
-  }
+	.gallery {
+		grid-template-columns: repeat(6, 1fr);
+	}
 
-  .cta {
-    /* 3/5 = 60% + 2/5 = 40% */
-    grid-template-columns: 3fr 2fr;
-  }
+	.cta {
+		/* 3/5 = 60% + 2/5 = 40% */
+		grid-template-columns: 3fr 2fr;
+	}
 
-  .cta-form {
-    grid-template-columns: 1fr;
-  }
+	.cta-form {
+		grid-template-columns: 1fr;
+	}
 
-  .btn--form {
-    margin-top: 1.2rem;
-  }
+	.btn--form {
+		margin-top: 1.2rem;
+	}
 
-  /* MOBILE NAVIGATION */
-  .btn-mobile-nav {
-    display: block;
-  }
+	/* MOBILE NAVIGATION */
+	.btn-mobile-nav {
+		display: block;
+	}
 
-  .main-nav {
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transition: all 0.5s ease-in;
-    transform: translateX(100%);
+	.main-nav {
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		transition: all 0.5s ease-in;
+		transform: translateX(100%);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    /* HIDE NAVIGATION */
-    /* Dans un premier temps nous voulons que le Mobile Navigation n'apparaîsse pas, mais il ne faut pas utiliser display: none car cela ne permet pas de faire d'animation ! Il faut utiliser la propriété position pour sortir le menu de la page et le faire apparaître grâce à une animation au moment du clic sur le menu hamburger puis le faire resortir de la page avec le bouton close */
-    /* display: none; */
+		/* HIDE NAVIGATION */
+		/* Dans un premier temps nous voulons que le Mobile Navigation n'apparaîsse pas, mais il ne faut pas utiliser display: none car cela ne permet pas de faire d'animation ! Il faut utiliser la propriété position pour sortir le menu de la page et le faire apparaître grâce à une animation au moment du clic sur le menu hamburger puis le faire resortir de la page avec le bouton close */
+		/* display: none; */
 
-    /* 1) Masquer le menu visuellement */
-    opacity: 0;
+		/* 1) Masquer le menu visuellement */
+		opacity: 0;
 
-    /* 2) Rendre le menu inaccessible à la souris et au clavier */
-    pointer-events: none;
+		/* 2) Rendre le menu inaccessible à la souris et au clavier */
+		pointer-events: none;
 
-    /* 3) Masquer le menu */
-    visibility: hidden;
-  }
+		/* 3) Masquer le menu */
+		visibility: hidden;
+	}
 
-  .nav-open .main-nav {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-  }
+	.nav-open .main-nav {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+		transform: translateX(0);
+	}
 
-  .nav-open .icon-mobile-nav[name="close-outline"] {
-    display: block;
-  }
+	.nav-open .icon-mobile-nav[name='close-outline'] {
+		display: block;
+	}
 
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
-    display: none;
-  }
+	.nav-open .icon-mobile-nav[name='menu-outline'] {
+		display: none;
+	}
 
-  .main-nav-list {
-    flex-direction: column;
-    gap: 4.8rem;
-  }
+	.main-nav-list {
+		flex-direction: column;
+		gap: 4.8rem;
+	}
 
-  .main-nav-link:link,
-  .main-nav-link:visited {
-    font-size: 3rem;
-  }
+	.main-nav-link:link,
+	.main-nav-link:visited {
+		font-size: 3rem;
+	}
 }
 
 /* 44em = 704px --> (44em*16px=704px) */
 @media (max-width: 44em) {
-  .grid--3-cols,
-  .grid--4-cols {
-    grid-template-columns: repeat(2, 1fr);
-  }
+	.grid--3-cols,
+	.grid--4-cols {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-  .diets {
-    grid-column: 1/-1;
-    justify-self: center;
-  }
+	.diets {
+		grid-column: 1/-1;
+		justify-self: center;
+	}
 
-  .heading-secondary {
-    margin-bottom: 4.8rem;
-  }
+	.heading-secondary {
+		margin-bottom: 4.8rem;
+	}
 
-  .pricing-plan {
-    width: 100%;
-  }
+	.pricing-plan {
+		width: 100%;
+	}
 
-  /* Analyser les 3 déclarations suivantes pour mieux les comprendre en pratique */
-  .grid--footer {
-    grid-template-columns: repeat(6, 1fr);
-  }
+	/* Analyser les 3 déclarations suivantes pour mieux les comprendre en pratique */
+	.grid--footer {
+		grid-template-columns: repeat(6, 1fr);
+	}
 
-  .logo-col,
-  .address-col {
-    grid-column: span 3;
-  }
+	.logo-col,
+	.address-col {
+		grid-column: span 3;
+	}
 
-  .nav-col {
-    grid-row: 1;
-    grid-column: span 2;
-  }
+	.nav-col {
+		grid-row: 1;
+		grid-column: span 2;
+	}
 }
 
 /* 34em = 544px --> (34em*16px=544px) */
 @media (max-width: 34em) {
-  .grid {
-    row-gap: 4.8rem;
-  }
+	.grid {
+		row-gap: 4.8rem;
+	}
 
-  .grid--2-cols,
-  .grid--3-cols,
-  .grid--4-cols {
-    grid-template-columns: 1fr;
-  }
+	.grid--2-cols,
+	.grid--3-cols,
+	.grid--4-cols {
+		grid-template-columns: 1fr;
+	}
 
-  .btn,
-  .btn:link,
-  .btn:visited {
-    padding: 2.4rem 1.6rem;
-  }
+	.btn,
+	.btn:link,
+	.btn:visited {
+		padding: 2.4rem 1.6rem;
+	}
 
-  .hero {
-    padding: 0 3.2rem;
-  }
+	.hero {
+		padding: 0 3.2rem;
+	}
 
-  .section-hero {
-    padding: 2.4rem 0 4.8rem 0;
-  }
+	.section-hero {
+		padding: 2.4rem 0 4.8rem 0;
+	}
 
-  .hero-img {
-    width: 80%;
-  }
+	.hero-img {
+		width: 80%;
+	}
 
-  .logos img {
-    height: 1.2rem;
-  }
+	.logos img {
+		height: 1.2rem;
+	}
 
-  /* À cause du Z-pattern, les images et les textes sont pas dans le bon ordre lors du passage en mode colonne pour les téléphones mobiles. Pour cela les 2 déclarations suivantes résolvent le problème. */
-  .step-img-box:nth-child(2) {
-    grid-row: 1;
-  }
+	/* À cause du Z-pattern, les images et les textes sont pas dans le bon ordre lors du passage en mode colonne pour les téléphones mobiles. Pour cela les 2 déclarations suivantes résolvent le problème. */
+	.step-img-box:nth-child(2) {
+		grid-row: 1;
+	}
 
-  .step-img-box:nth-child(6) {
-    grid-row: 5;
-  }
+	.step-img-box:nth-child(6) {
+		grid-row: 5;
+	}
 
-  /* Maintenant le soucis, c'est que il y a le même espace entre tous les textes et les images, il y a une mauvaise hiérarchie des espaces blancs. La déclaration suivante résout le problème. */
-  .step-img-box {
-    transform: translateY(24px);
-  }
+	/* Maintenant le soucis, c'est que il y a le même espace entre tous les textes et les images, il y a une mauvaise hiérarchie des espaces blancs. La déclaration suivante résout le problème. */
+	.step-img-box {
+		transform: translateY(24px);
+	}
 
-  .testimonials {
-    grid-template-columns: 1fr;
-  }
+	.testimonials {
+		grid-template-columns: 1fr;
+	}
 
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
-  }
+	.gallery {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.2rem;
+	}
 
-  .cta {
-    grid-template-columns: 1fr;
-  }
+	.cta {
+		grid-template-columns: 1fr;
+	}
 
-  /* Suite à la déclaration à .cta ci-dessus, l'image a disparu car elle n'a pas de contenu en HTML. Voici comment résoudre le problème et aussi la faire apparaître en premier dans la card de formulaire. */
-  .cta-img-box {
-    height: 32rem;
-    grid-row: 1;
-  }
+	/* Suite à la déclaration à .cta ci-dessus, l'image a disparu car elle n'a pas de contenu en HTML. Voici comment résoudre le problème et aussi la faire apparaître en premier dans la card de formulaire. */
+	.cta-img-box {
+		height: 32rem;
+		grid-row: 1;
+	}
 }
 
 /* FIX SAFARI FLEXBOX GAP */
 
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
-  margin-right: 4.8rem;
+	margin-right: 4.8rem;
 }
 
 .no-flexbox-gap .list-item:not(:last-child) {
-  margin-bottom: 1.6rem;
+	margin-bottom: 1.6rem;
 }
 
 .no-flexbox-gap .list-icon:not(:last-child) {
-  margin-right: 1.6rem;
+	margin-right: 1.6rem;
 }
 
 .no-flexbox-gap .delivered-faces {
-  margin-right: 1.6rem;
+	margin-right: 1.6rem;
 }
 
 .no-flexbox-gap .meal-attribute:not(:last-child) {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .no-flexbox-gap .meal-icon {
-  margin-right: 1.6rem;
+	margin-right: 1.6rem;
 }
 
 .no-flexbox-gap .footer-row div:not(:last-child) {
-  margin-right: 6.4rem;
+	margin-right: 6.4rem;
 }
 
 .no-flexbox-gap .social-links li:not(:last-child) {
-  margin-right: 2.4rem;
+	margin-right: 2.4rem;
 }
 
 .no-flexbox-gap .footer-nav li:not(:last-child) {
-  margin-bottom: 2.4rem;
+	margin-bottom: 2.4rem;
 }
 
 @media (max-width: 75em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 3.2rem;
-  }
+	.no-flexbox-gap .main-nav-list li:not(:last-child) {
+		margin-right: 3.2rem;
+	}
 }
 
 @media (max-width: 59em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 4.8rem;
-  }
+	.no-flexbox-gap .main-nav-list li:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 4.8rem;
+	}
 }
